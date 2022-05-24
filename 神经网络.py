@@ -1,6 +1,3 @@
-'''
-https://blog.csdn.net/qq_39567427/article/details/111935833?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4.no_search_link
-'''
 import os
 import xlrd
 from openpyxl import Workbook
