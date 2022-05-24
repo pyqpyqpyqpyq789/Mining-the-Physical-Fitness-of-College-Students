@@ -276,4 +276,3 @@ if __name__ == "__main__":
     # 得出强关联规则
     print("关联规则：")
     rules = generateRules(L, suppData, minConf=0.4)
-
