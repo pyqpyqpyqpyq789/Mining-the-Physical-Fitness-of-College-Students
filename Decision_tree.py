@@ -20,7 +20,7 @@ def autoNorm(data):         # 传入一个矩阵
     return normData
 
 
-data_path = r'../IJERPH/神经网络_男'
+data_path = r'../IJERPH/神经网络_女'
 filenames = os.listdir(data_path)
 
 for file in filenames:
@@ -106,6 +106,19 @@ plt.scatter(np.arange(len(train_x), len(x), 1), val_y, c='r', s=4, marker='o', a
 plt.scatter(np.arange(0, len(train_x), 1), RF.predict(train_x), c='y', s=4, alpha=1, marker='x')
 plt.scatter(np.arange(len(train_x), len(x), 1), pred2, c='g', s=4, alpha=0.5, marker='v')
 plt.legend(['train true', 'validation true', 'train pred', 'validation pred'], frameon=True, loc="upper right", markerscale=3)
+plt.show()
+
+##
+plt.figure(figsize=(10, 10))
+fig, ax = plt.subplots()
+plt.xlabel('True', fontsize='15')
+plt.ylabel('Pred', fontsize="15")
+#plt.xticks(ticks=range(100, 600, 20))
+#plt.yticks(ticks=range(100, 600, 20))
+ax.set_xlim(xmin=5, xmax=18)
+ax.set_ylim(ymin=5, ymax=18)
+plt.scatter(val_y, pred2, c='r', s=1, alpha=1, marker='x')
+plt.plot([0, 400], [0, 400])
 plt.show()
 
 loss2 = mean_squared_error(pred2, val_y)
